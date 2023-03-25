@@ -9,9 +9,10 @@ import axios from 'axios'
 export const addItemsToCart = (id, quantity) => async (dispatch,getState) => {
    
     const { data } = await axios.get(
-      `https://ecommerce-notoriousbrain.onrender.com/api/v1/product/${id}`
+      `http://0.0.0.0:4000/api/v1/product/${id}`
+      // `https://ecommerce-notoriousbrain.onrender.com/api/v1/product/${id}`
     );
-
+ 
     dispatch({
       type: ADD_TO_CART,
       payload: {
