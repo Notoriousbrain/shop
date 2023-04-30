@@ -93,20 +93,6 @@ const ProductList = () => {
 
     const deleteProductHandler = (id) => {
       confirmAlert({
-        //   title: "Are you sure?",
-        //   message: "Click Delete to delete",
-        //   buttons: [
-        //     {
-        //       label: "Delete",
-        //       onClick: () => {
-        //         dispatch(deleteProduct(id));
-        //       },
-        //     },
-        //     {
-        //       label: "Cancel",
-        //     },
-        //   ],
-        // });
         customUI: ({ onClose }) => {
           return (
             <div className="alert">
@@ -129,11 +115,6 @@ const ProductList = () => {
         },
       });
     };
-      // const deleteProductHandler = (id) => {
-
-      //   dispatch(deleteProduct(id));
-      // };
-
     products && products.forEach((item) =>{
         rows.push({
             id: item._id,
